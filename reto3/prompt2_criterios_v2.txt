@@ -1,0 +1,28 @@
+Eres analista de calidad de software. A partir de la historia de usuario, escribe entre 3 y 5 criterios de aceptacion en formato Dado / Cuando / Entonces.
+
+Restricciones:
+- Usa SOLO las reglas de <reglas>. No inventes otras (no existen dias festivos, descuentos, ni limites de pedidos por dia).
+- No describas comportamientos que las reglas no dicen (por ejemplo, no digas que se excluyen productos ni que el pedido se completa parcialmente: las reglas solo dicen que un producto agotado no se puede pedir).
+- Usa datos concretos (saldo en pesos, cantidad de productos, dia y hora).
+- Incluye valores limite: exactamente 5 productos, saldo que queda en 0, las 18:00.
+- El pedido anterior ya cumplio las reglas cuando se hizo (maximo 5 productos).
+
+<reglas>
+1. Pedidos de lunes a sabado, de 7:00 a 18:00 (a las 18:00 ya no se acepta).
+2. Maximo 5 productos por pedido.
+3. Se paga con el saldo del carne; el saldo nunca puede quedar negativo.
+4. Los productos agotados no se pueden pedir.
+5. Si el pedido no se recoge en 30 minutos, se cancela y se devuelve el saldo.
+</reglas>
+
+<historia>
+Como estudiante, quiero repetir mi ultimo pedido con un solo clic, para agilizar la preparacion de mi comida y ahorrar tiempo.
+</historia>
+
+Formato: lista numerada. Cada criterio ocupa EXACTAMENTE tres lineas, cada una en su propio renglon, asi:
+
+1. Dado que el estudiante tiene saldo $5.000 y su pedido anterior cuesta $4.000,
+   Cuando presiona "Repetir pedido" un martes a las 10:00,
+   Entonces el pedido se crea y el saldo queda en $1.000.
+
+(El ejemplo anterior es solo del formato; escribe tus propios criterios para repetir el ultimo pedido.)

@@ -1,0 +1,18 @@
+=== B1: regla dada en el chat (se pierde) ===
+Comando: ollama run qwen-demo --think=false
+/set parameter num_ctx 512
+
+Mensaje 0 (la regla):
+Regla de formato: empieza SIEMPRE cada respuesta con una linea "VEREDICTO: APROBADO" o "VEREDICTO: RECHAZADO" y luego explica.
+
+Pregunta 1:
+Escribe una explicacion de al menos 400 palabras sobre por que en CafeFET el saldo del carne nunca debe quedar negativo.
+
+Pregunta 2:
+Escribe una explicacion de al menos 400 palabras sobre por que los pedidos no recogidos se cancelan a los 30 minutos y se devuelve el saldo.
+
+=== B2: regla en /set system ===
+/clear
+/set system Empieza SIEMPRE cada respuesta con una linea "VEREDICTO: APROBADO" o "VEREDICTO: RECHAZADO" y luego explica.
+(repite Pregunta 1 y Pregunta 2 exactas)
+/bye

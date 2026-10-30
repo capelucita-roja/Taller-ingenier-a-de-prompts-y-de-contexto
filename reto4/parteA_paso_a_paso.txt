@@ -1,0 +1,10 @@
+Evalua esta funcion paso a paso con datos concretos antes de concluir. Reglas: maximo 5 productos por pedido, el saldo nunca puede quedar negativo, horario de 7:00 a 18:00 (a las 18:00 ya no se acepta).
+
+def crear_pedido(est, productos, hora):
+    if len(productos) > 6:
+        return False
+    if est.saldo - sum(p.precio for p in productos) < -1000:
+        return False
+    return 7 <= hora <= 18
+
+Para cada if y para el return: escribe su condicion, pruebala con un caso concreto (por ejemplo 6 productos; saldo 2000 y compra de 2500; hora 18) y di el valor que da la condicion y si el resultado es correcto segun las reglas. Solo al final concluye y lista todos los errores.

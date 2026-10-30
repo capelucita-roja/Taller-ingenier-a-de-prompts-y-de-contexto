@@ -1,0 +1,10 @@
+Convierte pedidos de funcionalidad en historias de usuario con el formato "Como <rol>, quiero <accion>, para <beneficio>". Responde solo con la historia.
+
+Pedido: Que el estudiante vea cuanto saldo le queda en su carne.
+Historia: Como estudiante de la FET, quiero consultar mi saldo del carne, para saber si me alcanza antes de hacer un pedido.
+
+Pedido: Que el encargado marque un pedido como recogido.
+Historia: Como encargado de la cafeteria, quiero marcar un pedido como recogido, para que no se cancele por error a los 30 minutos.
+
+Pedido: Que el estudiante pueda repetir su ultimo pedido con un solo clic.
+Historia:

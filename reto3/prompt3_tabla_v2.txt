@@ -1,0 +1,39 @@
+Eres tester de software. Con los criterios de aceptacion, genera una tabla Markdown de casos de prueba con exactamente estas columnas: Caso | Entrada | Resultado esperado | Criterio que cubre. Usa solo las reglas de <reglas>.
+
+Restricciones:
+- Cada caso debe ser ejecutable: en Entrada escribe datos concretos (saldo en pesos, precio total del pedido anterior, cantidad de productos, dia de la semana y hora). Todas las pruebas son al presionar "Repetir pedido".
+- Incluye casos de frontera: exactamente 5 productos (valido) y 6 (rechazado), saldo que queda exactamente en $0 (valido), pedido a las 7:00 (valido), a las 17:59 (valido) y a las 18:00 (rechazado), sabado (valido) y domingo (rechazado).
+- No inventes reglas ni comportamientos que no esten en <reglas>.
+- Genera entre 8 y 12 casos.
+
+<reglas>
+1. Pedidos de lunes a sabado, de 7:00 a 18:00 (a las 18:00 ya no se acepta).
+2. Maximo 5 productos por pedido.
+3. Se paga con el saldo del carne; el saldo nunca puede quedar negativo.
+4. Los productos agotados no se pueden pedir.
+5. Si el pedido no se recoge en 30 minutos, se cancela y se devuelve el saldo.
+</reglas>
+
+<criterios>
+1. Dado que el estudiante tiene el carne con saldo $15.000,
+   Cuando realiza un pedido valido de lunes a sabado entre las 7:00 y las 18:00,
+   Entonces se crea el pedido y se descuenta el saldo correspondiente.
+
+2. Dado que el estudiante intenta pedir productos con saldo $10.000,
+   Cuando el costo total supera su saldo disponible en la cuenta,
+   Entonces el sistema rechaza el pedido para evitar un saldo negativo.
+
+3. Dado que el estudiante selecciona productos del inventario,
+   Cuando intenta anadir un producto que esta agotado al carrito,
+   Entonces el sistema impide agregar ese producto especifico al pedido.
+
+4. Dado que el estudiante realiza un pedido fuera de horario o en domingo,
+   Cuando intenta crear un pedido antes de las 7:00 o despues de las 18:00,
+   Entonces el sistema bloquea la creacion del pedido por estar fuera de servicio.
+
+5. Dado que el estudiante tiene un pedido creado hace 29 minutos,
+   Cuando pasa exactamente 30 minutos sin recoger su comida,
+   Entonces el sistema cancela el pedido y devuelve el saldo original.
+</criterios>
+
+Antes de entregar, revisa que cada criterio (1 a 5) tenga al menos un caso y que cada regla de <reglas> tenga al menos un caso de frontera; si falta alguno, agregalo y escribe debajo de la tabla una linea "AGREGADO: ..." indicando cual agregaste. Si no falta nada, escribe "AGREGADO: ninguno".

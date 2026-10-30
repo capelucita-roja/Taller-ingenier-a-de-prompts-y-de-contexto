@@ -1,0 +1,24 @@
+## Que quiero
+Escribe una funcion en Python llamada crear_pedido(estudiante, productos, fecha_hora) que valide y cree un pedido anticipado en la cafeteria CafeFET.
+
+## Para quien
+El codigo lo va a leer y mantener un estudiante de ingenieria de software que esta aprendiendo; debe ser claro y facil de probar.
+
+## Contexto
+CafeFET es un sistema de pedidos anticipados de la cafeteria de la FET. El estudiante paga con el saldo de su carne. Las reglas de negocio son:
+
+<reglas>
+1. Se reciben pedidos de lunes a sabado, de 7:00 a 18:00 (a las 18:00 ya no se acepta).
+2. Maximo 5 productos por pedido.
+3. Se paga con el saldo del carne; el saldo nunca puede quedar negativo.
+4. Los productos agotados no se pueden pedir.
+5. Si el pedido no se recoge en 30 minutos, se cancela y se devuelve el saldo.
+</reglas>
+
+Datos de entrada:
+- estudiante: objeto con el atributo saldo (numero, en pesos).
+- productos: lista de objetos con los atributos nombre, precio y disponible (bool).
+- fecha_hora: objeto datetime con el momento del pedido.
+
+## Formato de salida
+Devuelve SOLO un bloque de codigo Python con la funcion, con docstring y type hints. La funcion retorna una tupla (exito: bool, mensaje: str). Despues del codigo, una lista de maximo 5 lineas indicando que regla valida cada parte.
