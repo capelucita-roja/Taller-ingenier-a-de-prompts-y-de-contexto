@@ -3,7 +3,7 @@
 Diplomado en Ingeniería de Software con IA y Sistemas Agénticos · Sesión 03 · Módulo 1
 
 ## Integrantes
-- grupo G7
+- Grupo G7
 - Diego Fernando Ibañez
 - Jean Carlos Godoy Escobar
 - Elkin Daniel Villaneda
